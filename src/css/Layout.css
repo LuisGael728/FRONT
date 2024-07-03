@@ -1,0 +1,66 @@
+/* layout.css */
+
+/* Contenedor principal de la aplicación */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Contenedor para la fecha y hora */
+.date-time-container {
+  text-align: center;
+  color: #000000;
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*Fecha*/
+.date-time-container p {
+  color: black;
+  font-size: 150%;
+}
+
+
+/* Hora */
+.date-time-container span {
+  font-size: 80px;
+}
+
+/* Contenedor para el layout general */
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor para el contenido del layout */
+.layout-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* Contenedor para el wrapper del contenido */
+.content-wrapper {
+  background-color: #00000000;
+  width: 100%;
+}
+
+/* Contenedor para el footer del layout */
+.layout-footer {
+  font-weight: 600;
+  background-color: #333333; 
+  color: #ffffff;
+  text-align: center;
+  padding: 16px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
