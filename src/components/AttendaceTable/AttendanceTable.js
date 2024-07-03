@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/AttendanceTable.css';
+import './AttendanceTable.css';
 import { List } from 'antd';
 
 const AttendanceTable = () => {

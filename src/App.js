@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import AttendanceTable from './AttendanceTable';
-import Layout from './Layout';
-import './css/Layout.css';
-import NavigationBar from './NavigationBar';
+import AttendanceTable from './components/AttendaceTable/AttendanceTable.js';
+import Layout from './components/Layout/Layout.js';
+import './components/Layout/Layout.css';
+import NavigationBar from './components/NavigationBar/NavigationBar.js';
 
 const App = () => {
     const [currentDateTime, setCurrentDateTime] = useState(new Date());

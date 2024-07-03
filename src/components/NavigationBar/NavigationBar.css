@@ -1,0 +1,27 @@
+/* Estilos para la barra de navegación */
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #ffffff;
+  max-width: 100%; /* Ancho máximo de la barra de navegación */
+  height: 10vh; /* Altura relativa de la barra de navegación */
+  padding: 0 2%; /* Padding horizontal proporcional */
+}
+.logo{
+  width: 80%;
+}
+/* Estilo para los contenedores de logo y título */
+
+/* Estilos específicos para el contenedor del logo */
+.logo-container {
+  width: 10%; /* Ancho relativo del contenedor del logo */
+}
+
+.title-container a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5vw; /* Tamaño del texto del título en unidades relativas */
+}
