@@ -10,9 +10,9 @@
   padding: 0 2%; /* Padding horizontal proporcional */
 }
 .logo{
-  width: 80%;
+  width: 60%;
 }
-/* Estilo para los contenedores de logo y título */
+
 
 /* Estilos específicos para el contenedor del logo */
 .logo-container {
@@ -24,4 +24,21 @@
   color: #fff;
   font-weight: bold;
   font-size: 1.5vw; /* Tamaño del texto del título en unidades relativas */
+}
+
+/* Media Queries para diferentes tamaños de pantalla*/
+@media (max-width: 768px){
+.navigation-bar{
+  flex-direction: column;
+  height: auto; /*Ajustar para pantallas mas promedio*/
+}
+
+.title-container a{
+  font-size: 3.5vw;
+}
+
+.logo-container{
+  width: 20%;
+}
+
 }

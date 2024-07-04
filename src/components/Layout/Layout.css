@@ -23,13 +23,13 @@
 /*Fecha*/
 .date-time-container p {
   color: black;
-  font-size: 150%;
+  font-size: 170%;
 }
 
 
 /* Hora */
 .date-time-container span {
-  font-size: 80px;
+  font-size: 60px;
 }
 
 /* Contenedor para el layout general */
@@ -59,7 +59,7 @@
   background-color: #333333; 
   color: #ffffff;
   text-align: center;
-  padding: 16px;
+  padding: 10px;
   position: fixed;
   bottom: 0;
   width: 100%;
