@@ -1,12 +1,9 @@
 .footer {
-  font-weight: 600;
-  background-color: #333333; 
-  color: #ffffff;
-  text-align: center;
-  padding: 1rem 0; /* Corrige el padding */
-  width: 100%;
-  position: fixed;
-  bottom: 0;
+    position:relative;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
 /* Ajustes para diferentes tamaños de pantalla */
