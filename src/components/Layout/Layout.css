@@ -6,6 +6,7 @@
   height: 100vh;
 }
 
+<<<<<<< HEAD
 .main {
   flex-grow: 1;
   display: flex;
@@ -24,3 +25,5 @@
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
 }
+=======
+>>>>>>> b36312820ad95e7132905ccb228d535b40b68062
