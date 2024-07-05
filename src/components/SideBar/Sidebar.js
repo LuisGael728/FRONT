@@ -1,10 +1,9 @@
-// SidebarMenu.js
 import React from 'react';
-import './SidebarMenu.css';
+import './Sidebar.css'
 
-const SidebarMenu = ({ isOpen }) => {
+const SideBar = ({ isOpen }) => {
   return (
-    <div className={`sidebar-menu ${isOpen ? 'open' : ''}`}>
+    <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <ul>
         <li><a href="#">Opción 1</a></li>
         <li><a href="#">Opción 2</a></li>
@@ -14,4 +13,4 @@ const SidebarMenu = ({ isOpen }) => {
   );
 };
 
-export default SidebarMenu;
+export default SideBar;

@@ -1,0 +1,12 @@
+/* Estilos globales del cuerpo */
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: linear-gradient(to bottom, #cecccc 50%, #008e5a 50%);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

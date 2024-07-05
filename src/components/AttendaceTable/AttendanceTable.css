@@ -1,13 +1,3 @@
-/* Importación de las fuentes de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;600&family=Roboto+Slab:wght@400;700&display=swap');
-
-/* Estilos globales del cuerpo */
-body {
-  font-family: 'Lato', sans-serif;
-  background: linear-gradient(to bottom, #cecccc 50%, #008e5a 50%);
-}
-
-/* Contenedor principal */
 .container {
   display: flex;
   flex-direction: column;
@@ -16,7 +6,7 @@ body {
 }
 
 /* Estilo de la tabla de asistencia */
-.attendance-table-container {
+.attendance-container {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -25,28 +15,45 @@ body {
   align-items: flex-start;
 }
 
+/* Estilo para la fecha y hora actuales */
+.date-time {
+  width: 100%;
+  text-align: center;
+}
+
+.date-time span {
+  margin: 5px 0;
+  font-size: 4em;
+  font-family: 'Roboto', arial;
+}
+
+.date-time p {
+  font-size: 2em;
+  font-family: 'Roboto', arial;
+  margin: 5px 0;
+}
+
 /* Estilo para cada tabla de asistencia */
-.checador-table {
+.checadores {
   align-self: flex-start;
   width: 20%;
-  max-width: 300px;
   padding: 10px;
   background-color: #f1f1f1;
   border-radius: 8px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
   margin-top: 15px;
   min-height: 25%;
 }
 
 /* Estilo para el título de cada tabla de asistencia */
-.checador-table h2 {
+.checadores h2 {
   font-size: 1.5vw; /* Ajustado para responder al tamaño de la ventana visual */
   padding: 0.8vw;
   background-color: #e7e7e7;
   border: 0.2vw solid #ccc;
   border-bottom: none;
   text-align: center;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', arial;
   border-radius: 8px;
 }
 
@@ -56,15 +63,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', arial;
   font-weight: 100;
   margin: 0;
-  padding: 0.5vw; /* Ajustado para responder al tamaño de la ventana visual */
+  padding: .4rem; /* Ajustado para responder al tamaño de la ventana visual */
 }
 
 .user-info .name, .user-info .date {
   margin: 0;
   padding: 0;
   font-size: 20px;
-  font-weight:'Roboto Slab', serif;
+  font-weight: 'Roboto', arial;
 }

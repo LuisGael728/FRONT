@@ -1,11 +1,10 @@
-// NavigationBar.js
 import React, { useState } from 'react';
-import './NavigationBar.css';
+import './Header.css';
 import logo from '../../assets/logo.svg';
-import anotherLogo from '../../assets/CFE3.svg';
-import SidebarMenu from '../SideBar/SidebarMenu.js';
+import logoCFE from '../../assets/CFE.svg';
+import Sidebar from '../SideBar/Sidebar.js';
 
-const NavigationBar = () => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,19 +12,19 @@ const NavigationBar = () => {
   };
 
   return (
-    <nav className="navigation-bar">
+    <nav className="navbar">
       <div className="logo-container">
         <img src={logo} alt="Logo" className="logo" onClick={toggleMenu} />
       </div>
-      <div className="title-container">
+      <div className="title">
         <a href="#">Sistema de seguimiento de asistencia en vivo.</a>
       </div>
       <div className="logo-container">
-        <img src={anotherLogo} alt="Another Logo" className="logo" />
+        <img src={logoCFE} alt=" logoCFE" className="logo" />
       </div>
-      <SidebarMenu isOpen={isMenuOpen} />
+      <Sidebar isOpen={isMenuOpen} />
     </nav>
   );
 };
 
-export default NavigationBar;
+export default Header;
