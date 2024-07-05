@@ -12,3 +12,15 @@
   justify-content: center;
   align-items: center;
 }
+
+/* Contenedor para la fecha y hora */
+.date-time-container {
+  text-align: center;
+  color: #ff0000;
+  margin: 2vh 0 0 0; /* Ajuste de margen superior para una mejor distribución vertical */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
