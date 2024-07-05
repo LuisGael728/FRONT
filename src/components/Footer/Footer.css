@@ -1,9 +1,29 @@
 .footer {
-    font-weight: 600;
-    background-color: #333333; 
-    color: #ffffff;
-    text-align: center;
-    padding: 10 0 ;
-    width: 100%;
+  font-weight: 600;
+  background-color: #333333; 
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0; /* Corrige el padding */
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+/* Ajustes para diferentes tamaños de pantalla */
+@media (max-width: 1200px) {
+  .footer p {
+    font-size: 1.2rem;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .footer p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer p {
+    font-size: 0.8rem;
+  }
+}
