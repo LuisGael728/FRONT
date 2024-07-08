@@ -22,7 +22,7 @@
 }
 
 .date-time span {
-  margin: 5px 0;
+  margin: 1px 0;
   font-size: 6vw;
   font-family: 'Roboto', arial;
 }
@@ -128,11 +128,15 @@
   }
 
   .logo {
-    width: 40%; /* Ajustamos el tamaño del logo */
+    width: 70%; /* Ajustamos el tamaño del logo */
   }
 
   .logo-container {
     width: 25%; /* Ajustamos el tamaño del contenedor del logo */
+  }
+
+  .another-logo{
+    width: 100%;
   }
 
   .title-container a {
@@ -147,10 +151,13 @@
   /* Ajustes adicionales si es necesario */
   .date-time span {
     font-size: 3.5vw; /* Ajustamos el tamaño de la fuente para la fecha y hora */
+    margin-top: 5px;
+    padding: 8px;
   }
 
   .date-time p {
-    font-size: 1.2em; /* Ajustamos el tamaño de la fuente para la fecha */
+    font-size: 1.5em; /* Ajustamos el tamaño de la fuente para la fecha */
+
   }
 }
 
