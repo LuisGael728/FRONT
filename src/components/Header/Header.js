@@ -13,14 +13,14 @@ const Header = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo-container">
+      <div className="logo-container-left">
         <img src={logo} alt="Logo" className="logo" onClick={toggleMenu} />
       </div>
       <div className="title">
         <a href="#">Sistema de seguimiento de asistencia en vivo.</a>
       </div>
-      <div className="logo-container">
-        <img src={logoCFE} alt=" logoCFE" className="logo" />
+      <div className="logo-container-right">
+        <img src={logoCFE} alt="Logo CFE" className="logo" />
       </div>
       <Sidebar isOpen={isMenuOpen} />
     </nav>
