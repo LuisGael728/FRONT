@@ -71,6 +71,12 @@
   padding: 0.9rem; /* Ajustado para responder al tamaño de la ventana visual */
 }
 
+.user-info .name{
+  overflow: hidden ;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .user-info .name, .user-info .date {
   margin: 0;
   padding: 0;
