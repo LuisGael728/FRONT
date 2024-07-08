@@ -37,37 +37,38 @@
 .checadores {
   align-self: flex-start;
   width: 20%;
-  padding: 15px; /* Reducir padding superior */
+  padding: 10px; /* Aumentar el padding para separar más el contenido */
   background-color: #f1f1f1;
   border-radius: 8px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
-  margin-top: 0; /* Reducir margen superior */
+  margin-top: 20px; /* Aumentar el margen superior para más separación entre tablas */
+  margin-right: 25px;
   min-height: 25%;
 }
 
 /* Estilo para el título de cada tabla de asistencia */
 .checadores h2 {
   font-size: 1.5vw; /* Ajustado para responder al tamaño de la ventana visual */
-  padding: 0.8vw;
+  padding: 0.5vw;
   background-color: #e7e7e7;
   border: 0.2vw solid #ccc;
   border-bottom: none;
   text-align: center;
   font-family: 'Roboto', arial;
   border-radius: 8px;
-  margin-top: 0vh;
+  margin-top: -0vh;
 }
 
 /* Estilo para la información del usuario en la lista */
 .user-info {
   font-size: 200px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* 8===D*/
   align-items: center;
   font-family: 'Roboto', arial;
-  font-weight: 100;
+  font-weight: 500;
   margin: 0;
-  padding: .4rem; /* Ajustado para responder al tamaño de la ventana visual */
+  padding: 0.9rem; /* Ajustado para responder al tamaño de la ventana visual */
 }
 
 .user-info .name, .user-info .date {
@@ -76,6 +77,14 @@
   font-size: 20px;
   font-weight: 'Roboto', arial;
 }
+
+.user-info .date {
+  margin: 0;
+  margin-left: auto; /* Empuja la fecha hacia la derecha */
+  font-size: 20px;
+  font-weight: 'Roboto', arial;
+}
+
 
 
 @media (max-width: 1280px) {
@@ -95,7 +104,7 @@
   background-color: #f1f1f1;
   border-radius: 8px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
-  margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+  margin-top: 1%; /* Ajusta el margen superior según sea necesario */
   margin-right: 25px;
   height: 408px;
   overflow: hidden;
@@ -150,8 +159,8 @@
 
   /* Ajustes adicionales si es necesario */
   .date-time span {
-    font-size: 3.5vw; /* Ajustamos el tamaño de la fuente para la fecha y hora */
-    margin-top: 5px;
+    font-size: 4.5vw; /* Ajustamos el tamaño de la fuente para la fecha y hora */
+    margin-top: 0%;
     padding: 8px;
   }
 
@@ -161,7 +170,7 @@
   }
 }
 
-@media (min-width: 1440px) and (max-height: 900px) {
+@media (min-width: 1440px){
   /* Ajustes para pantallas 1440p */
   body {
     font-size: 20px; /* Aumentamos el tamaño de la fuente */
