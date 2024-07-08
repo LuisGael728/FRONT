@@ -20,7 +20,7 @@ const Header = () => {
         <a href="#">Sistema de seguimiento de asistencia en vivo.</a>
       </div>
       <div className="logo-container">
-        <img src={logoCFE} alt=" logoCFE" className="logo" />
+        <img src={logoCFE} alt=" logo CFE" className="logo" />
       </div>
       <Sidebar isOpen={isMenuOpen} />
     </nav>
