@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './AttendanceTable.css';
 import { List } from 'antd';
+import { ExclamationCircleOutlined } from '@ant-design/icons';
 
 const initialLogsState = [
   [
@@ -41,7 +42,7 @@ const initialLogsState = [
   ]
 ];
 
-const daysOfWeek = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+const daysOfWeek = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 const monthsOfYear = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
 const formatDate = (dateString) => {
@@ -62,32 +63,49 @@ const AttendanceTable = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const logsState = initialLogsState.map((logs, index) => {
+    if (logs.length === 0) {
+      return [{ id: `Fuera de servicio ${index + 1}`, name: 'Fuera de servicio', registered: {} }];
+    } else if (logs.length > 0 && logs.every(log => !log.name)) {
+      return [{ id: `No data ${index + 1}`, name: 'No data', registered: {} }];
+    } else {
+      return logs;
+    }
+  });
+
   return (
     <div className="attendance-container">
       <div className="date-time">
         <span>{formatTime(currentDateTime)}</span>
         <p>{formatDate(currentDateTime)}</p>
       </div>
-      {initialLogsState.map((logs, index) => (
+      {logsState.map((logs, index) => (
         <div className="checadores" key={index}>
           <h2>ET {index + 1}</h2>
-          <List
-            dataSource={logs}
-            renderItem={(item) => (
-              <List.Item key={item.id}>
-                <List.Item.Meta
-                  title={
-                    <div className="user-info">
-                      <span className="name">{item.name}</span>
-                      {item.registered && item.registered.date && (
-                        <span className="date">{formatTime(item.registered.date)}</span>
-                      )}
-                    </div>
-                  }
-                />
-              </List.Item>
-            )}
-          />
+          {logs.length === 1 && logs[0].name === 'Fuera de servicio' ? (
+            <div className="fuera-de-servicio">
+              <ExclamationCircleOutlined className="fuera-de-servicio-icon" />
+              <p className="fuera-de-servicio-text">Fuera de servicio</p>
+            </div>
+          ) : (
+            <List
+              dataSource={logs}
+              renderItem={(item) => (
+                <List.Item key={item.id}>
+                  <List.Item.Meta
+                    title={
+                      <div className="user-info">
+                        <span className="name">{item.name}</span>
+                        {item.registered && item.registered.date && (
+                          <span className="date">{formatTime(item.registered.date)}</span>
+                        )}
+                      </div>
+                    }
+                  />
+                </List.Item>
+              )}
+            />
+          )}
         </div>
       ))}
     </div>

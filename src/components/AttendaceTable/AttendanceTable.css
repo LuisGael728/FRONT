@@ -33,7 +33,7 @@
   margin: 1px 0;
 }
 
-/* Estilo para cada tabla de asistencia */
+/* Estilo para cada tabla de asistencia*/
 .checadores {
   align-self: flex-start;
   width: 20%;
@@ -95,6 +95,28 @@
   font-weight: 'Roboto', arial;
 }
 
+.fuera-de-servicio{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 50%;
+}
+
+.fuera-de-servicio-icon{
+font-size: 48px;
+color: #FF0000;
+margin-bottom: 10px;
+}
+
+.fuera-de-servicio-text{
+font-size: 18px;
+font-weight: bold;
+color: #FF0000;
+text-align: center;
+margin: 0;
+
+}
 
 
 @media (max-width: 1280px) {
