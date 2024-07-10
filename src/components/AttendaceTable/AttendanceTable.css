@@ -44,6 +44,7 @@
   margin-top: 20px; /* Aumentar el margen superior para más separación entre tablas */
   margin-right: 25px;
   min-height: 25%;
+  max-height: 100%;
 }
 
 /* Estilo para el título de cada tabla de asistencia */
@@ -68,9 +69,11 @@
   font-family: 'Roboto', arial;
   font-weight: 500;
   margin: 0;
-  padding: 0.9rem; /* Ajustado para responder al tamaño de la ventana visual */
+  padding: 0.3rem; /* Ajustado para responder al tamaño de la ventana visual */
 }
 
+
+/*Abreviación para los Nombres */ /*IMPORTANTE*/
 .user-info .name{
   overflow: hidden ;
   text-overflow: ellipsis;
@@ -112,8 +115,8 @@
   box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
   margin-top: 1%; /* Ajusta el margen superior según sea necesario */
   margin-right: 25px;
-  height: 408px;
-  overflow: hidden;
+  min-height: 15%;
+  max-height:63% ;
 }
 
   .checadores h2 {
@@ -129,7 +132,7 @@
 
   .user-info {
     font-size: 1.8rem; /* Ajustamos el tamaño de la fuente de la información del usuario */
-    padding: 0.3rem; /* Ajustamos el padding */
+
   }
 
   .user-info .name, .user-info .date {
@@ -167,7 +170,7 @@
   .date-time span {
     font-size: 4.5vw; /* Ajustamos el tamaño de la fuente para la fecha y hora */
     margin-top: 0%;
-    padding: 8px;
+    padding: 1px;
   }
 
   .date-time p {
@@ -176,7 +179,7 @@
   }
 }
 
-@media (min-width: 1440px){
+@media (max-width: 1440px){
   /* Ajustes para pantallas 1440p */
   body {
     font-size: 20px; /* Aumentamos el tamaño de la fuente */
@@ -191,6 +194,8 @@
     padding: 10px; /* Ajustamos el padding */
     margin-top: -2px; /* Ajustamos el margen superior */
     min-height: 30%; /* Ajustamos la altura mínima */
+    height: 440px;
+    overflow: hidden;
   }
 
   .checadores h2 {
