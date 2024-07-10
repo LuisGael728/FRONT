@@ -1,26 +1,27 @@
+/*1rem = 16px*/
+
 .footer {
-    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
     background-color: #333;
+    }
+  .footer p {
+    margin: 0;
     color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Ajustes para diferentes tamaños de pantalla */
-@media (max-width: 1200px) {
-  .footer p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
-}
-
-@media (max-width: 768px) {
-  .footer p {
-    font-size: 1rem;
+  
+  @media (max-width: 560px) {
+    .footer p {
+      font-size: 1rem;
+    }
   }
-}
-
-@media (max-width: 480px) {
-  .footer p {
-    font-size: 0.8rem;
+  
+  @media (min-width: 1600px){
+    .footer p {
+      font-size: 1.6rem;
+    }
   }
-}
