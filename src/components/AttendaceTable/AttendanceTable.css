@@ -4,8 +4,7 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   flex-grow: 1;
-  align-items: flex-start; /* Asegurar que los elementos se alineen en la parte superior */
-  padding-top: 0; /* Reducir cualquier padding superior */
+  align-items: end;
 }
 
 /* Estilo para la fecha y hora actuales */
@@ -13,7 +12,7 @@
   width: 100%;
   text-align: center;
   color: #000000;
-  margin: 1vh 0 0 0; /* Ajuste de margen superior para una mejor distribución vertical */
+  margin: 2vh 0 0 0; /* Ajuste de margen superior para una mejor distribución vertical */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,30 +21,27 @@
 }
 
 .date-time span {
-  margin: 1px 0;
-  font-size: 6vw;
+  margin: 5px 0;
+  font-size: 4vw;
   font-family: 'Roboto', arial;
 }
 
 .date-time p {
   font-size: 2em;
   font-family: 'Roboto', arial;
-  margin: 1px 0;
+  margin: 5px 0;
 }
 
-/* Estilo para cada tabla de asistencia*/
+/* Estilo para cada tabla de asistencia */
 .checadores {
   align-self: flex-start;
   width: 20%;
-  padding: 10px; /* Aumentar el padding para separar más el contenido */
+  padding: 10px;
   background-color: #f1f1f1;
   border-radius: 8px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
-  margin-top: 20px; /* Aumentar el margen superior para más separación entre tablas */
-  margin-right: 25px;
+  margin-top: 10px;
   min-height: 25%;
-  max-height: 100%;
-  height: 570px;
 }
 
 /* Estilo para el título de cada tabla de asistencia */
@@ -58,27 +54,18 @@
   text-align: center;
   font-family: 'Roboto', arial;
   border-radius: 8px;
-  margin-top: -0vh;
 }
 
 /* Estilo para la información del usuario en la lista */
 .user-info {
   font-size: 200px;
   display: flex;
-  justify-content: flex-start; /* 8===D*/
+  justify-content: space-between;
   align-items: center;
   font-family: 'Roboto', arial;
-  font-weight: 500;
+  font-weight: 100;
   margin: 0;
-  padding: 0.3rem; /* Ajustado para responder al tamaño de la ventana visual */
-}
-
-
-/*Abreviación para los Nombres */ /*IMPORTANTE*/
-.user-info .name{
-  overflow: hidden ;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  padding: .4rem; /* Ajustado para responder al tamaño de la ventana visual */
 }
 
 .user-info .name, .user-info .date {
@@ -86,184 +73,4 @@
   padding: 0;
   font-size: 20px;
   font-weight: 'Roboto', arial;
-}
-
-.user-info .date {
-  margin: 0;
-  margin-left: auto; /* Empuja la fecha hacia la derecha */
-  font-size: 20px;
-  font-weight: 'Roboto', arial;
-}
-
-.fuera-de-servicio{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-height: 50%;
-}
-
-.fuera-de-servicio-icon{
-font-size: 48px;
-color: #FF0000;
-margin-bottom: 10px;
-}
-
-.fuera-de-servicio-text{
-font-size: 18px;
-font-weight: bold;
-color: #FF0000;
-text-align: center;
-margin: 0;
-
-}
-
-
-@media (max-width: 1280px) {
-  /* Ajustes generales */
-  body {
-    font-size: 14px;
-  }
-
-  .attendance-container {
-    justify-content: center; /* Centramos las tablas en pantallas más pequeñas */
-  }
-
-  .checadores {
-  align-self: flex-start;
-  width: 20%;
-  padding: 10px; /* Ajusta el padding según sea necesario */
-  background-color: #f1f1f1;
-  border-radius: 8px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
-  margin-top: 1%; /* Ajusta el margen superior según sea necesario */
-  margin-right: 25px;
-  min-height: 15%;
-  max-height:63% ;
-}
-
-  .checadores h2 {
-    font-size: 1.2vw; /* Ajustado para responder al tamaño de la ventana visual */
-    padding: 8px; /* Aumentar el padding del título */
-    background-color: #e7e7e7;
-    border: 2px solid #ccc; /* Aumentar el grosor del borde */
-    border-bottom: none;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 8px;
-  }
-
-  .user-info {
-    font-size: 1.8rem; /* Ajustamos el tamaño de la fuente de la información del usuario */
-
-  }
-
-  .user-info .name, .user-info .date {
-    font-size: 0.9rem; /* Ajustamos el tamaño de la fuente del nombre y la fecha */
-  }
-
-  .navigation-bar {
-    flex-direction: column; /* Cambiamos la dirección del flex a columna */
-    height: auto; /* Ajustamos la altura */
-    padding: 10px; /* Ajustamos el padding */
-  }
-
-  .logo {
-    width: 70%; /* Ajustamos el tamaño del logo */
-  }
-
-  .logo-container {
-    width: 25%; /* Ajustamos el tamaño del contenedor del logo */
-  }
-
-  .another-logo{
-    width: 100%;
-  }
-
-  .title-container a {
-    font-size: 1.2rem; /* Ajustamos el tamaño de la fuente del título */
-  }
-
-  .layout-footer {
-    font-size: 0.9rem; /* Ajustamos el tamaño de la fuente del footer */
-    padding: 8px; /* Ajustamos el padding */
-  }
-
-  /* Ajustes adicionales si es necesario */
-  .date-time span {
-    font-size: 4.5vw; /* Ajustamos el tamaño de la fuente para la fecha y hora */
-    margin-top: 0%;
-    padding: 1px;
-  }
-
-  .date-time p {
-    font-size: 1.5em; /* Ajustamos el tamaño de la fuente para la fecha */
-
-  }
-}
-
-@media (max-width: 1440px){
-  /* Ajustes para pantallas 1440p */
-  body {
-    font-size: 20px; /* Aumentamos el tamaño de la fuente */
-  }
-
-  .attendance-container {
-    justify-content: space-evenly; /* Aseguramos que las tablas se distribuyan uniformemente */
-  }
-
-  .checadores {
-    width: 18%; /* Ajustamos el ancho de las tablas */
-    padding: 10px; /* Ajustamos el padding */
-    margin-top: -2px; /* Ajustamos el margen superior */
-    min-height: 30%; /* Ajustamos la altura mínima */
-    height: 440px;
-    overflow: hidden;
-  }
-
-  .checadores h2 {
-    font-size: 1.2vw; /* Ajustamos el tamaño de la fuente */
-    padding: 1.0vw; /* Ajustamos el padding */
-  }
-
-  .user-info {
-    font-size: 0.2rem; /* Ajustamos el tamaño de la fuente */
-    padding: 0.3rem; /* Ajustamos el padding */
-  }
-
-  .user-info .name, .user-info .date {
-    font-size: 1rem; /* Ajustamos el tamaño de la fuente */
-  }
-
-  .navigation-bar {
-    flex-direction: row; /* Aseguramos que la barra de navegación esté en fila */
-    height: auto; /* Ajustamos la altura */
-    padding: 15px; /* Ajustamos el padding */
-  }
-
-  .logo {
-    width: 90%; /* Ajustamos el tamaño del logo */
-  }
-
-  .logo-container {
-    width: 20%; /* Ajustamos el tamaño del contenedor del logo */
-  }
-
-  .title-container a {
-    font-size: 1.0rem; /* Ajustamos el tamaño de la fuente del título */
-  }
-
-  .layout-footer {
-    font-size: 1.2rem; /* Ajustamos el tamaño de la fuente del footer */
-    padding: 10px; /* Ajustamos el padding */
-  }
-
-  /* Ajustes adicionales si es necesario */
-  .date-time span {
-    font-size: 5vw; /* Ajustamos el tamaño de la fuente para la fecha y hora */
-  }
-
-  .date-time p {
-    font-size: 1.5em; /* Ajustamos el tamaño de la fuente para la fecha */
-  }
 }
