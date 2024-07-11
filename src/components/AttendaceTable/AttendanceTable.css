@@ -104,13 +104,13 @@ height: 50%;
 }
 
 .fuera-de-servicio-icon{
-font-size: 48px;
+font-size: 100px;
 color: #FF0000;
 margin-bottom: 10px;
 }
 
 .fuera-de-servicio-text{
-font-size: 18px;
+font-size: 30px;
 font-weight: bold;
 color: #FF0000;
 text-align: center;
@@ -200,6 +200,7 @@ margin: 0;
     font-size: 1.5em; /* Ajustamos el tamaño de la fuente para la fecha */
 
   }
+
 }
 
 @media (max-width: 1440px){
@@ -266,4 +267,19 @@ margin: 0;
   .date-time p {
     font-size: 1.5em; /* Ajustamos el tamaño de la fuente para la fecha */
   }
+
+  .fuera-de-servicio-icon{
+    font-size: 58px;
+    color: #FF0000;
+    margin-bottom: 10px;
+    }
+    
+    .fuera-de-servicio-text{
+    font-size: 25px;
+    font-weight: bold;
+    color: #FF0000;
+    text-align: center;
+    margin: 0;
+  }
+    
 }

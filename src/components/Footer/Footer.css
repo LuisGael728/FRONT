@@ -1,27 +1,29 @@
-/*1rem = 16px*/
-
 .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 10vh;
-    background-color: #333;
-    }
+  font-weight: 600;
+  background-color: #333333; 
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0; /* Corrige el padding */
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+/* Ajustes para diferentes tamaños de pantalla */
+@media (max-width: 1200px) {
   .footer p {
-    margin: 0;
-    color: white;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
-  
-  @media (max-width: 560px) {
-    .footer p {
-      font-size: 1rem;
-    }
+}
+
+@media (max-width: 768px) {
+  .footer p {
+    font-size: 1rem;
   }
-  
-  @media (min-width: 1600px){
-    .footer p {
-      font-size: 1.6rem;
-    }
+}
+
+@media (max-width: 480px) {
+  .footer p {
+    font-size: 0.8rem;
   }
+}

@@ -32,14 +32,15 @@ const initialLogsState = [
     { id: 20, name: 'William Lee', registered: { date: '2023-06-14T12:30:00Z' } },
   ],
   [
+    
     { id: 21, name: 'Charlotte Martinez', registered: { date: '2023-06-14T20:30:00Z' } },
     { id: 22, name: 'Jacob Rodriguez', registered: { date: '2023-06-14T21:15:00Z' } },
     { id: 23, name: 'Amelia Lee', registered: { date: '2023-06-14T22:00:00Z' } },
     { id: 24, name: 'Liam Wilson', registered: { date: '2023-06-14T22:45:00Z' } },
     { id: 25, name: 'Emma Anderson', registered: { date: '2023-06-14T23:30:00Z' } },
     { id: 26, name: 'Emily Brown', registered: { date: '2023-06-14T20:45:00Z' } },
-    { id: 27, name: 'William Lee', registered: { date: '2023-06-14T19:30:00Z' } },
-  ]
+    { id: 27, name: 'William Lee', registered: { date: '2023-06-14T19:30:00Z' } }, 
+   ]
 ];
 
 const daysOfWeek = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
