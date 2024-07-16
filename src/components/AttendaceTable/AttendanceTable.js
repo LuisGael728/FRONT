@@ -23,16 +23,16 @@ const initialLogsState = [
     { id: 14, name: 'William Lee', registered: { date: '2023-06-14T12:30:00Z' } },
   ],
   [
+
+  ],
+  [
     { id: 14, name: 'Ethan Garcia', registered: { date: '2023-06-14T16:45:00Z' } },
     { id: 15, name: 'Ava Lopez', registered: { date: '2023-06-14T17:30:00Z' } },
     { id: 16, name: 'Alexander Moore', registered: { date: '2023-06-14T18:15:00Z' } },
     { id: 17, name: 'Mia Taylor', registered: { date: '2023-06-14T19:00:00Z' } },
     { id: 18, name: 'William Brown', registered: { date: '2023-06-14T19:45:00Z' } },
     { id: 19, name: 'Emily Brown', registered: { date: '2023-06-14T11:45:00Z' } },
-    { id: 20, name: 'William Lee', registered: { date: '2023-06-14T12:30:00Z' } },
-  ],
-  [
-    
+    { id: 20, name: 'William Lee', registered: { date: '2023-06-14T12:30:00Z' } }, 
   ]
 ];
 

@@ -103,7 +103,7 @@
 .title a {
   text-decoration: none;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   flex-grow: 1;
 }
 
@@ -117,37 +117,58 @@
   width: 100%;
 }
 
+@media (max-width: 1440px) {
 
-/*Media Querys para celular y Television*/
-@media (max-width: 560px) {
-  .navbar {
-    padding: 0.6rem 0;
-  }
-
-  .title {
+  .title{
     text-align: center;
+    margin: 0 auto;
   }
 
   .title a {
-    font-size: 1.1rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.7rem; /* Tamaño de fuente más pequeño para el título */
+    flex-grow: 1; 
   }
-
+  
+  /* Logo CFE */
   .logo-container {
-    width: 20vw;
-    text-align: center;
-  }
-
-  .menu-icon {
-    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
   }
 
   .logo {
-    width: 80%;
+    max-width: 45%; /* Tamaño del logo en porcentaje relativo al contenedor */
+    height: auto;
+  }
+
+@media (max-width: 1280px) {
+
+  .title{
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .title a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem; /* Tamaño de fuente más pequeño para el título */
+    flex-grow: 1; 
+  }
+  
+  /* Logo CFE */
+  .logo-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+  }
+
+  .logo {
+    max-width: 40%; /* Tamaño del logo en porcentaje relativo al contenedor */
+    height: auto;
   }
 }
-
-@media (min-width: 1600px) {
-  .title a {
-    font-size: 2.2rem;
-  }
 }
