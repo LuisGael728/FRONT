@@ -9,7 +9,7 @@
 /* Checadores */
 .checadores {
   width: 20%;
-  height: 100%;
+  height: 90%;
   background-color: #f1f1f1;
   border-radius: .5rem;
   box-shadow: 10px 15px 10px 10px rgba(0, 0, 0, .2)
@@ -21,7 +21,6 @@
   border: 0.2vw solid #ccc;
   border-bottom: none;
   text-align: center;
-  font-family: 'Roboto', arial;
   border-radius: 8px;
 }
 
@@ -33,13 +32,16 @@
   font-size: 1.2rem;
   margin: 0 .625rem;
   font-weight: 100;
+  padding: .250rem 0;
 }
 
 
 /* Fuera de servicio */
 .fuera-de-servicio-content{
+  margin-top:40%;
   display:flex;
   flex-direction: column; 
+  align-items: center;
   align-items: center;
   color: red
 }
@@ -55,5 +57,19 @@
 
 
 @media (min-width: 1920px){
-
+  .checadores{
+    height: 100%;
+  }
+  .checadores h2{
+    font-size: 2rem;
+  }
+  .user-info{
+    font-size: 1.5rem;
+  }
+  .fuera-de-servicio-icon{
+    font-size: 6rem;
+  }
+  .fuera-de-servicio-text{
+    font-size: 2rem;
+  }
 }

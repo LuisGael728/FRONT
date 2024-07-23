@@ -4,23 +4,30 @@
     width: 100%;
     text-align: center;
     color: #000000;
-    margin: 1vh 0 0 0; /* Ajuste de margen superior para una mejor distribución vertical */
+    margin: 1rem 0 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
   }
   
   .date-time span {
-    margin: 0.1% 0;
-    font-size: 6vw;
-    font-family: 'Roboto', arial;
+    font-size: 4rem;
   }
   
   .date-time p {
-    font-size: 2em;
-    font-family: 'Roboto', arial;
-    margin: 0.1% 0;
+    font-size: 2rem;
+    margin: .5rem 0;
   }
-  
+
+@media (min-width: 1920px){
+  .date-time{
+    margin: 1rem 0 2rem 0;
+  }
+  .date-time span{
+    font-size: 5rem;
+  }
+  .date-time p{
+    font-size: 2.rem;
+  }
+}
