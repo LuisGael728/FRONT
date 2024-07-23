@@ -1,0 +1,26 @@
+/* DateTime.css */
+
+.date-time {
+    width: 100%;
+    text-align: center;
+    color: #000000;
+    margin: 1vh 0 0 0; /* Ajuste de margen superior para una mejor distribución vertical */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .date-time span {
+    margin: 0.1% 0;
+    font-size: 6vw;
+    font-family: 'Roboto', arial;
+  }
+  
+  .date-time p {
+    font-size: 2em;
+    font-family: 'Roboto', arial;
+    margin: 0.1% 0;
+  }
+  
