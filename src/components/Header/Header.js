@@ -18,7 +18,7 @@ const Header = () => {
           <span className={`line line3 ${isMenuOpen ? 'open' : ''}`}></span>
         </div>
         <div className="title">
-          <a href="/">Sistema de seguimiento de asistencia en vivo.</a>
+          <a href="/">LATS</a>
         </div>
         <div className="logo-container">
           <img src={logoCFE} alt="logo CFE" className="logo" />

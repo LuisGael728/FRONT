@@ -1,12 +1,10 @@
+/* Navbar con Sidebar */
 .navbar {
   width: 100vw;
   height: 10vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #333;
   color: #ffffff;
-  position: relative;
   z-index: 1;
 }
 
@@ -22,8 +20,8 @@
 /*Logo menu*/
 .hamburger-lines {
   cursor: pointer;
-  height: 1.6rem;
-  width: 2rem;
+  height: 1.4rem;
+  width: 1.672rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -31,9 +29,9 @@
 
 .hamburger-lines .line {
   display: block;
-  height: .3rem;
+  height: .25rem;
   width: 100%;
-  border-radius: 10px;
+  border-radius: .5rem;
   background: #fff;
 }
 
@@ -52,7 +50,7 @@
 }
 
 .hamburger-lines .line1.open {
-  transform: rotate(45deg);
+  transform: rotate(48deg);
 }
 
 .hamburger-lines .line2.open {
@@ -60,22 +58,22 @@
 }
 
 .hamburger-lines .line3.open {
-  transform: rotate(-45deg);
+  transform: rotate(-48deg);
 }
 
 /*Menu*/
 .menu-items {
   position: fixed;
   top: 10vh; 
-  left: -15vw; 
-  width: 15vw;
-  height: 80vh; 
+  left: -12vw; 
+  width: 12vw;
+  height: 82vh;
   background-color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: left 0.5s ease-in-out;
+  transition: left 0.4s ease-in-out;
 }
 
 .menu-items.open {
@@ -90,9 +88,7 @@
 .menu-items a {
   text-decoration: none;
   color: #fff;
-  font-weight: 500;
-  font-size: 1.2rem;
-  padding: 0.7rem;
+  font-size: 1rem;
 }
 
 .menu-items a:hover {
@@ -117,58 +113,5 @@
   width: 100%;
 }
 
-@media (max-width: 1440px) {
-
-  .title{
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .title a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.7rem; /* Tamaño de fuente más pequeño para el título */
-    flex-grow: 1; 
-  }
-  
-  /* Logo CFE */
-  .logo-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: auto;
-  }
-
-  .logo {
-    max-width: 45%; /* Tamaño del logo en porcentaje relativo al contenedor */
-    height: auto;
-  }
-
-@media (max-width: 1280px) {
-
-  .title{
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .title a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem; /* Tamaño de fuente más pequeño para el título */
-    flex-grow: 1; 
-  }
-  
-  /* Logo CFE */
-  .logo-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: auto;
-  }
-
-  .logo {
-    max-width: 40%; /* Tamaño del logo en porcentaje relativo al contenedor */
-    height: auto;
-  }
-}
+@media (min-width:1920px) {
 }
