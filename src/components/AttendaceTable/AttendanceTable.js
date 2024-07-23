@@ -22,68 +22,48 @@ const initialLogsState = [
     { id: 13, name: 'Emily Brown', registered: { date: '2023-06-14T11:45:00Z' } },
     { id: 14, name: 'William Lee', registered: { date: '2023-06-14T12:30:00Z' } },
   ],
+  [],
   [
-
-  ],
-  [
-    { id: 14, name: 'Ethan Garcia', registered: { date: '2023-06-14T16:45:00Z' } },
-    { id: 15, name: 'Ava Lopez', registered: { date: '2023-06-14T17:30:00Z' } },
-    { id: 16, name: 'Alexander Moore', registered: { date: '2023-06-14T18:15:00Z' } },
-    { id: 17, name: 'Mia Taylor', registered: { date: '2023-06-14T19:00:00Z' } },
-    { id: 18, name: 'William Brown', registered: { date: '2023-06-14T19:45:00Z' } },
-    { id: 19, name: 'Emily Brown', registered: { date: '2023-06-14T11:45:00Z' } },
-    { id: 20, name: 'William Lee', registered: { date: '2023-06-14T12:30:00Z' } }, 
+    { id: 15, name: 'Ethan Garcia', registered: { date: '2023-06-14T16:45:00Z' } },
+    { id: 16, name: 'Ava Lopez', registered: { date: '2023-06-14T17:30:00Z' } },
+    { id: 17, name: 'Alexander Moore', registered: { date: '2023-06-14T18:15:00Z' } },
   ]
 ];
 
-const daysOfWeek = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
-const monthsOfYear = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
-
-const formatDate = (dateString) => {
-  const date = new Date(dateString);
-  return `${daysOfWeek[date.getDay()]} ${date.getDate()} de ${monthsOfYear[date.getMonth()]} del ${date.getFullYear()}`;
-};
-
-const formatTime = (dateString) => {
-  const date = new Date(dateString);
-  return `${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}:${date.getSeconds().toString().padStart(2, '0')}`;
-};
+const formatTime = (dateString) => new Date(dateString).toTimeString().slice(0, 8);
 
 const AttendanceTable = () => {
-  const [currentDateTime, setCurrentDateTime] = useState(new Date().toISOString());
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const interval = setInterval(() => setCurrentDateTime(new Date().toISOString()), 1000);
-    return () => clearInterval(interval);
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const logsState = initialLogsState.map((logs, index) => {
-    if (logs.length === 0) {
-      return [{ id: `Fuera de servicio ${index + 1}`, name: 'Fuera de servicio', registered: {} }];
-    } else if (logs.length > 0 && logs.every(log => !log.name)) {
-      return [{ id: `No data ${index + 1}`, name: 'No data', registered: {} }];
-    } else {
-      return logs;
-    }
-  });
+  const logsState = initialLogsState.map((logs, index) =>
+    logs.length === 0 ? [{ id: `Fuera de servicio ${index + 1}`, name: 'Fuera de servicio', registered: {} }] : logs
+  );
+
+
+  const getLogsToDisplay = (logs) => windowWidth < 1920 ? logs.slice(-5) : logs;
 
   return (
     <div className="attendance-container">
-      <div className="date-time">
-        <span>{formatTime(currentDateTime)}</span>
-        <p>{formatDate(currentDateTime)}</p>
-      </div>
       {logsState.map((logs, index) => (
-        <div className="checadores" key={index}>
+        <div
+          className={`checadores ${logs.length === 1 && logs[0].name === 'Fuera de servicio' ? 'fuera-de-servicio' : ''}`}
+          key={index}
+        >
           <h2>ET {index + 1}</h2>
           {logs.length === 1 && logs[0].name === 'Fuera de servicio' ? (
-            <div className="fuera-de-servicio">
+            <div className="fuera-de-servicio-content">
               <ExclamationCircleOutlined className="fuera-de-servicio-icon" />
               <p className="fuera-de-servicio-text">Fuera de servicio</p>
             </div>
           ) : (
             <List
-              dataSource={logs}
+              dataSource={getLogsToDisplay(logs)}
               renderItem={(item) => (
                 <List.Item key={item.id}>
                   <List.Item.Meta
