@@ -47,14 +47,13 @@
 }
 
 .fuera-de-servicio-icon{
-  font-size: 4rem;
+  font-size: 3.75rem;
 }
 
 .fuera-de-servicio-text{
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
-
 
 @media (min-width: 1920px){
   .checadores{
