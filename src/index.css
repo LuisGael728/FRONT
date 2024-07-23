@@ -10,3 +10,29 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+
+.swal2-title {
+  font-size: 1.8rem; /* Cambia este valor para ajustar el tamaño del título */
+}
+
+.swal2-html-container {
+  font-size: 1.125rem  !important; /* Cambia este valor para ajustar el tamaño del texto */
+}
+
+.swal2-confirm {
+  font-size: 1.25rem; /* Cambia este valor para ajustar el tamaño del botón */
+}
+
+@media (min-width: 1920px){
+  .swal2-title {
+    font-size: 3rem; /* Cambia este valor para ajustar el tamaño del título */
+  }
+
+  .swal2-html-container {
+    font-size: 1.4rem  !important; /* Cambia este valor para ajustar el tamaño del texto */
+  }
+
+  .swal2-confirm {
+    font-size: 1.4rem; /* Cambia este valor para ajustar el tamaño del botón */
+  }
+}
