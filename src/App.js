@@ -1,10 +1,13 @@
 import React from 'react';
 import Layout from './components/Layout/Layout';
-import DateTime from './components/DateTime/DateTime';
+import Aviso from './components/Aviso/Aviso'; // Asegúrate de ajustar la ruta según la ubicación de tu componente
 
 function App() {
   return (
-    <Layout/>
+    <div>
+      <Aviso />
+      <Layout/>
+    </div>
   );
 }
 

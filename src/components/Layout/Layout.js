@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
-import Header from '../Header/Header'; // Ajusta la ruta según tu estructura de archivos
-import Footer from '../Footer/Footer'; // Ajusta la ruta según tu estructura de archivos
-import AttendanceTable from '../AttendaceTable/AttendanceTable'; // Ajusta la ruta según tu estructura de archivos
-import DateTime from '../DateTime/DateTime'; // Asegúrate de importar DateTime
-import './Layout.css'; // Ajusta la ruta y contenido según tus necesidades
+import Header from '../Header/Header';  
+import Footer from '../Footer/Footer'; 
+import AttendanceTable from '../AttendaceTable/AttendanceTable'; 
+import DateTime from '../DateTime/DateTime'; 
+import './Layout.css'; 
 
 const Layout = () => {
-  const [selectedMenuItem, setSelectedMenuItem] = useState(''); // Estado para la opción seleccionada
+  const [selectedMenuItem, setSelectedMenuItem] = useState(''); 
 
   const handleMenuItemClick = (option) => {
-    setSelectedMenuItem(option); // Actualiza el estado con la opción seleccionada
+    setSelectedMenuItem(option); 
   };
 
   return (
     <div className="layout">
       <Header onMenuItemClick={handleMenuItemClick} />
       <main>
-        <DateTime /> {/* Muestra DateTime siempre */}
-        {selectedMenuItem === 'entrada' && <AttendanceTable />} {/* Muestra AttendanceTable si 'entrada' está seleccionado */}
-        {selectedMenuItem === 'salida' && <AttendanceTable/>} {/* Aquí puedes agregar otro contenido si es necesario */}
+        <DateTime /> 
+        {selectedMenuItem === 'entrada' && <AttendanceTable />} 
+        {selectedMenuItem === 'salida' && <AttendanceTable/>} 
       </main>
       <Footer />
     </div>
