@@ -88,7 +88,7 @@
 .menu-items a {
   text-decoration: none;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .menu-items a:hover {
@@ -99,7 +99,7 @@
 .title a {
   text-decoration: none;
   color: #fff;
-  font-size: 1.9rem;
+  font-size: 1.75rem;
   flex-grow: 1;
 }
 
@@ -114,4 +114,17 @@
 }
 
 @media (min-width:1920px) {
+  .hamburger-lines{
+    height: 1.6rem;
+    width: 1.9rem;
+  }
+
+  .menu-items a{
+    font-size: 1.4rem;
+  }
+
+  .title a{
+    font-size: 2.5rem;
+  }
+
 }
